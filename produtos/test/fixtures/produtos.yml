@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  descricao: MyText
+  valor: 1.5
+  entregue: MyString
+  boolean: MyString
+  data: 2018-11-19
+
+two:
+  descricao: MyText
+  valor: 1.5
+  entregue: MyString
+  boolean: MyString
+  data: 2018-11-19

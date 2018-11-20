@@ -1,0 +1,26 @@
+<%= form_for @produtos do |f| %>
+
+Descricao
+<%= f.text_field :descricao %><br/>  
+
+Valor
+<%= f.text_area :valor %><br/>   
+
+Data
+<%= f.date_field :data %><br/>  
+
+
+<%= f.submit %>
+<% end %>
+
+<%= link_to "Voltar", root_url %>
+
+
+<% if @produtos.errors.any? %>
+  <p> Erros no envio das informações </p>
+  <% @produtos.errors.messages.each do |c, v| %>
+  <li>
+    <b> <%= c%>: </b> <%= v.to_sentence %>
+  </li>
+  <% end %>
+<% end %>

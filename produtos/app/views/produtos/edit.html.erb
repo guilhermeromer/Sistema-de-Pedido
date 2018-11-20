@@ -1,0 +1,18 @@
+<%= form_for @produtos, url: {action: "update"} do |f| %>
+                        <h2>Data</h2>
+                        <%= f.date_field :data, as: :data, value: f.object.data %>
+                        <h2>Descricao</h2>
+                        <%= f.text_field :descricao %>
+                        <h2>Valor</h2>
+                        <%= f.number_field :valor %>
+                        <%= f.submit "Editar" %>
+                    <% end %>
+
+<% if @produtos.errors.any? %>
+  <p> Erros no envio das informações </p>
+  <% @produtos.errors.messages.each do |c, v| %>
+  <li>
+    <b> <%= c%>: </b> <%= v.to_sentence %>
+  </li>
+  <% end %>
+<% end %>

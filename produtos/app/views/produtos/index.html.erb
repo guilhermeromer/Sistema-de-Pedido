@@ -21,7 +21,7 @@
                 <% if (produto.entregue) %>
                         <td>Já foi entregue</td>
                     <% else %>
-                        <td><%= button_to "Entregar".html_safe, entregue_path(produto) %></td>
+                        <td><%= button_to "Entregar", entregue_path(produto) %></td>
                 <% end %>
 
 

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   root "produtos#index"
 resources :produtos
-  get 'entregue/:id ', :to => 'produtos#entregue', :as => :entregue
+  post 'entregue/:id ', :to => 'produtos#entregue', :as => :entregue
   get 'amanha', :to => 'produtos#amanha'
   get 'ontem', :to => 'produtos#ontem'
   get 'hoje', :to => 'produtos#hoje'
